@@ -334,7 +334,24 @@
         integrity="sha256-Ma7RFL/ajnMYYVm0iyAqCA2j+jWid5Xr2DQr+kYG1XA=" crossorigin="anonymous" defer></script>
     <script src="https://luxam.fr/assets/js/app.5fbe0ce95e75ea944a3a.js" defer></script>
     <script>
-        console.log(window.location.href);
+        console.log(window.location.hostname);
+        function getDomain(url, subdomain) {
+            subdomain = subdomain || false;
+
+            url = url.replace(/(https?:\/\/)?(www.)?/i, '');
+
+            if (!subdomain) {
+                url = url.split('.');
+
+                url = url.slice(url.length - 2).join('.');
+            }
+
+            if (url.indexOf('/') !== -1) {
+                return url.split('/')[0];
+            }
+
+            return url;
+        }
         const clickHandler = (location) => {
             setTimeout(() => {
                 window.location.assign(`/${location}`)
