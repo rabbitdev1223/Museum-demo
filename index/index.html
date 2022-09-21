@@ -335,26 +335,10 @@
     <script src="https://luxam.fr/assets/js/app.5fbe0ce95e75ea944a3a.js" defer></script>
     <script>
         console.log(window.location.hostname);
-        function getDomain(url, subdomain) {
-            subdomain = subdomain || false;
-
-            url = url.replace(/(https?:\/\/)?(www.)?/i, '');
-
-            if (!subdomain) {
-                url = url.split('.');
-
-                url = url.slice(url.length - 2).join('.');
-            }
-
-            if (url.indexOf('/') !== -1) {
-                return url.split('/')[0];
-            }
-
-            return url;
-        }
+       
         const clickHandler = (location) => {
             setTimeout(() => {
-                window.location.assign(`/${location}`)
+                window.location.assign(window.location.hostname  + `/${location}`)
             }, 1000)
             const pt_page = document.querySelector('.pt-page')
             pt_page.classList.add('pt-page-scaleDownUp')
