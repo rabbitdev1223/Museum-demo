@@ -338,7 +338,7 @@
        
         const clickHandler = (location) => {
             setTimeout(() => {
-                window.location.assign(window.location.hostname  + `/${location}`)
+                window.location.assign(window.location.protocol + "/" + window.location.hostname  + `/${location}`)
             }, 1000)
             const pt_page = document.querySelector('.pt-page')
             pt_page.classList.add('pt-page-scaleDownUp')
