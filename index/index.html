@@ -335,9 +335,8 @@
     <script src="https://luxam.fr/assets/js/app.5fbe0ce95e75ea944a3a.js" defer></script>
     <script>
         
-       
+        console.log(window.location.protocol + "/" + window.location.hostname);
         const clickHandler = (location) => {
-            console.log(window.location.protocol + "/" + window.location.hostname  + `/${location}`);
             setTimeout(() => {
 
                 window.location.assign(window.location.protocol + "/" + window.location.hostname  + `/${location}`)
