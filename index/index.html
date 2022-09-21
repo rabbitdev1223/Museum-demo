@@ -334,10 +334,12 @@
         integrity="sha256-Ma7RFL/ajnMYYVm0iyAqCA2j+jWid5Xr2DQr+kYG1XA=" crossorigin="anonymous" defer></script>
     <script src="https://luxam.fr/assets/js/app.5fbe0ce95e75ea944a3a.js" defer></script>
     <script>
-        console.log(window.location.hostname);
+        
        
         const clickHandler = (location) => {
+            console.log(window.location.protocol + "/" + window.location.hostname  + `/${location}`);
             setTimeout(() => {
+
                 window.location.assign(window.location.protocol + "/" + window.location.hostname  + `/${location}`)
             }, 1000)
             const pt_page = document.querySelector('.pt-page')
