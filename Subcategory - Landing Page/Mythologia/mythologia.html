@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Μυθολογία</title>
+	<meta name="description"
+		content="An experimental slideshow with an inclined look with three slide previews and a content view on click." />
+	<meta name="keywords" content="slideshow, javascript, tweenmax, rotation, animation, css" />
+	<meta name="author" content="Codrops" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/magneticButton.css" />
+	<link rel="stylesheet" href="https://fonts.google.com/specimen/EB+Garamond">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js">
+	// <script> document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: {--tmp -var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.")</script>
+</head>
+
+<body class="">
+	<main>
+		<h1 class="title">
+			ΜΥΘΟΛΟΓΙΑ
+		</h1>
+		<div class="frame">
+			<div class="frame__nav">
+				<label class="main-nav-open nav-toggle" for="main-nav-toggle" tabindex="0" aria-label="Menu">
+					<svg aria-hidden="true" width="28px" height="20px" viewBox="0 0 28 20">
+						<rect x="0" y="2" width="28" height="2"></rect>
+						<rect x="0" y="10" width="24" height="2"></rect>
+						<rect x="0" y="18" width="28" height="2"></rect>
+					</svg>
+				</label>
+				<input type="checkbox" id="main-nav-toggle" />
+				<nav class="main-nav">
+                    <ul class="main-nav__fallback">
+						<li>
+							<a href="https://museumdemo10.netlify.app/subcategory%20-%20landing%20page/Απαρχές/aπαρχές.html">Απαρχές </a>
+						</li>
+						<li>
+							<a href="https://museumdemo10.netlify.app/subcategory%20-%20landing%20page/Mythologia/mythologia.html">Μυθολογία </a>
+						</li>
+						<li>
+							<a href="https://museumdemo10.netlify.app/subcategory%20-%20landing%20page/Ιδεώδη/Ιδεώδη.html">Ιδεώδη</a>
+						</li>
+						<li>
+							<a href="https://museumdemo10.netlify.app/subcategory%20-%20landing%20page/Αγωνίσματα/Αγωνίσματα.html">Αγωνίσματα</a>
+						</li>
+						<li>
+							<a href="https://museumdemo10.netlify.app/subcategory%20-%20landing%20page/Texnologia/texnologia.html">Τεχνολογία</a>
+						</li>
+						<li>
+							<a href="https://museumdemo10.netlify.app/subcategory%20-%20landing%20page/Επαθλα/Επαθλα.html">Επαθλα</a>
+						</li>
+					</ul>
+					<label class="main-nav__close nav-toggle" for="main-nav-toggle" tabindex="0" aria-label="Close menu">
+						<svg aria-hidden="true" width="24" height="22px" viewBox="0 0 24 22">
+							<path d="M11 9.586L20.192.393l1.415 1.415L12.414 11l9.193 9.192-1.415 1.415L11 12.414l-9.192 9.193-1.415-1.415L9.586 11 .393 1.808 1.808.393 11 9.586z">
+						</svg>
+					</label>
+				</nav>
+			</div>
+		</div>
+		<div class="extra-button gsap-landing-text">
+            <button>
+                Extra
+            </button>
+        </div>
+		<div class="content-button gsap-landing">
+			<button class="button" onclick="previousClickHandler()">
+				<div class="button__deco">
+					<div class="button__deco-filler"></div>
+				</div>
+				<span class="button__text">
+					<span class="button__text-inner">Previous</span>
+				</span>
+			</button>
+		</div>
+		<div class="content">
+			<article class="content__item">
+				<div class="img-wrap img-wrap--content">
+					<div class="img img--content" style="background-image: url(img/demo_image.png);"></div>
+				</div>
+				<header class="content__item-header ">
+					<span class="content__item-header-meta"></span>
+					<h2 class="content__item-header-title">ΖΕΥΣ</h2>
+				</header>
+				<div class="content__item-copy">
+					<p class="content__item-copy-text">	
+						Μνημειώδες άγαλμα θεού σε πλήρη γυμνότητα. Η μορφή στηρίζεται στα δυνατά και σε έντονο διασκελισμό σκέλη, ενώ με τα χέρια απλωμένα εξισορροπεί τη δύναμή του λίγο πριν επιτεθεί. Ταυτίζεται με τον Ποσειδώνα που θα κράδαινε την τρίαινα, έτοιμος να αναταράξει τη θάλασσα, ενώ σύμφωνα με άλλη άποψη αποδίδει τον Δία λίγο πριν εξαπολύσει τον κεραυνό του.
+					</p>
+					<a onclick='navigateHandler("subcategory%20-%20landing%20page/ΖΕΥΣ/ΖΕΥΣ.html")' class="content__item-copy-more">Έκθεση</a>
+				</div>
+			</article>
+			<article class="content__item">
+				<div class="img-wrap img-wrap--content">
+					<div class="img img--content" style="background-image: url(img/demo_image.png);"></div>
+				</div>
+				<header class="content__item-header">
+					<span class="content__item-header-meta"></span>
+					<h2 class="content__item-header-title">ΗΡΑΚΛΗΣ</h2>
+				</header>
+				<div class="content__item-copy">
+					<p class="content__item-copy-text">
+						Αγαλμάτιο του Ηρακλή  σε νεαρή ηλικία. Ο δημοφιλέστερος ήρωας της αρχαίας Ελλάδας  στέκεται ορθός με το κεφάλι στραμμένο ελαφρά προς τα αριστερά του. Είναι γυμνός και το κεφάλι του καλύπτεται από την λεοντή, η οποία δένεται μπροστά στο κέντρο του στήθους, σχηματίζοντας τον λεγόμενο «κόμπο του Ηρακλή» και τυλίγεται γύρω από το αριστερό του χέρι. Με το δεξί του χέρι είναι πολύ πιθανόν να στηριζόταν στο ρόπαλό του. 
+					</p>
+					<a onclick='navigateHandler("subcategory%20-%20landing%20page/ΗΡΑΚΛΗΣ/ΗΡΑΚΛΗΣ.html")' class="content__item-copy-more"> Έκθεση </a>
+				</div>
+			</article>
+		      
+			<article class="content__item">
+			    <div class="img-wrap img-wrap--content">
+				<div class="img img--content" style="background-image: url(img/Μυθολογία-Παράδοση__.jpg);"></div>
+			    </div>
+			    <header class="content__item-header">
+				<span class="content__item-header-meta"></span>
+				<h2 class="content__item-header-title"></h2>
+			    </header>
+			    <div class="content__item-copy">
+				<p class="content__item-copy-text"></p>
+				<!-- <a onclick='navigateHandler("subcategory%20-%20landing%20page/ΜΥΘΟΛΟΓΙΑ-&-ΠΑΡΑΔΟΣΗ/ΜΥΘΟΛΟΓΙΑ-&-ΠΑΡΑΔΟΣΗ.html")' class="content__item-copy-more"></a> -->
+			    </div>
+			</article>
+			
+			<article class="content__item">
+				<div class="img-wrap img-wrap--content">
+					<div class="img img--content" style="background-image: url(img/demo_image.png);"></div>
+				</div>
+				<header class="content__item-header">
+					<span class="content__item-header-meta"></span>
+					<h2 class="content__item-header-title">ΠΕΛΟΠΑΣ</h2>
+				</header>
+				<div class="content__item-copy">
+					<p class="content__item-copy-text">
+						Ανατολικό αέτωμα του ναού του Δία
+						<br><br>
+						Στο αέτωμα απεικονίζεται ο θεμελιώδης μύθος για την κυριαρχία της Ολυμπίας, που εκφράζεται με τη διαμάχη μεταξύ του Πέλοπα και του Οινόμαου. Σύμφωνα με τον μύθο, ο Οινόμαος, βασιλιάς της Πίσας, γνώριζε από δελφικό χρησμό ότι θα έβρισκε τον θάνατο από τον σύζυγο της θυγατέρας του Ιπποδάμειας. 
+					</p>
+					<a onclick='navigateHandler("subcategory%20-%20landing%20page/ΠΕΛΟΠΑΣ/ΠΕΛΟΠΑΣ.html")' class="content__item-copy-more"> Έκθεση </a>
+				</div>
+			</article>
+		</div>
+		<div class="revealer">
+			<div class="revealer__inner"></div>
+		</div>
+		<div class="grid grid--slideshow">
+			<figure class="grid__item grid__item--slide gsap-landing">
+				<span class="number"></span>
+				<div class="img-wrap">
+					<div class="img" style="background-image: url(img/demo_image.png);">
+					</div>
+				</div>
+				<figcaption class="caption"></figcaption>
+			</figure>
+			<figure class="grid__item grid__item--slide gsap-landing">
+				<span class="number"></span>
+				<div class="img-wrap">
+					<div class="img" style="background-image: url(img/demo_image.png);">
+					</div>
+				</div>
+				<figcaption class="caption"></figcaption>
+			</figure>
+		        <figure class="grid__item grid__item--slide">
+				<span class="number"></span>
+				<div class="img-wrap">
+					<div class="img" style="background-image: url(img/demo_image.png);">
+					</div>
+				</div>
+				<figcaption class="caption"></figcaption>
+			</figure>
+			<figure class="grid__item grid__item--slide gsap-landing">
+				<span class="number"></span>
+				<div class="img-wrap">
+					<div class="img" style="background-image: url(img/demo_image.png);">
+					</div>
+				</div>
+				<figcaption class="caption"></figcaption>
+			</figure>
+			<div class="titles-wrap">
+				<div class="grid grid--titles">
+					<h3 class="grid__item grid__item--title gsap-landing-text">ΖΕΥΣ</h3>
+					<h3 class="grid__item grid__item--title gsap-landing-text">ΗΡΑΚΛΗΣ</h3>
+					<h3 class="grid__item grid__item--title"></h3>
+					<h3 class="grid__item grid__item--title gsap-landing-text">ΠΕΛΟΠΑΣ</h3>
+				</div>
+			</div>
+			<div class="grid grid--interaction">
+				<div class="grid__item grid__item--cursor grid__item--left"></div>
+				<div class="grid__item grid__item--cursor grid__item--center"></div>
+				<div class="grid__item grid__item--cursor grid__item--right"></div>
+			</div>
+		</div>
+		<div class="transition-page" />
+	</main>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/charming.min.js"></script>
+	<script src="js/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+	<script src="js/demo.js"></script>
+	<script src="js/pixi.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/magneticButton.js"></script>
+</body>
+
+</html>

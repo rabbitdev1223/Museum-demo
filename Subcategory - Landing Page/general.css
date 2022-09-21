@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+.clickedHoverImg {
+    scale: 1.3;
+    transition: .5s;
+}
+
+.hover-img {
+    transition: .5s
+}
+.hover-img2 {
+    transition: .5s
+}
+
+.hover-img3 {
+    transition: .5s
+}
+
+.hover-img4 {
+    transition: .5s
+}
+
+.hover-img5 {
+    transition: .5s
+}
+
+.extra-button {
+	width: 7rem;
+	/* min-width: 5rem; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+	height: 2rem;
+	position: fixed;
+	top: 4%;
+	right: 10vw;
+	border-radius: 999px;
+	z-index: 2;
+}
+
+.extra-button button {
+	list-style: none;
+	border: none;
+	color: white;
+	background: none;
+    font-family: 'Lobster Two', cursive;
+    letter-spacing: 2px;
+
+}
+
+@media only screen and (max-width: 1200px) {
+	  .extra-button {
+		  right: 5rem;
+	  }
+}
+
+@media only screen and (max-width: 900px) {
+	.extra-button {
+		bottom: 2.8rem;
+	}
+}

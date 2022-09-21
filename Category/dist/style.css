@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Kudryashev Display';
+    src: local('Kudryashev Display Display Sans'), local('Kudryashev-Display-Display-Sans'),
+        url('KudryashevDisplay-Sans.woff2') format('woff2'),
+        url('KudryashevDisplay-Sans.woff') format('woff'),
+        url('KudryashevDisplay-Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }

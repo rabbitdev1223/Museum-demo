@@ -1,0 +1,123 @@
+body {
+	--color-text: #383838;
+	--color-text-secondary: #4b4b4b;
+	--color-link: #222222;
+	--color-link-hover: #4b4b4b;
+	--color-focus: #fff;
+	color: var(--color-text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.frameMenu {
+	position: fixed;
+	text-align: center;
+	z-index: 9999;
+	/* right: 0;
+	top: 0%; */
+}
+
+.frame__navMenu {
+	font-family: jaf-bernina-sans, Futura, Arial, sans-serif;
+	position: fixed;
+	right: 5%;
+	top: 5%;
+	z-index: 9999;
+}
+
+@media screen and (min-width: 53em) {
+	main {
+		overflow: hidden;
+	}
+	.frameMenu {
+		display: grid;
+		align-content: space-between;
+		width: 100%;
+		text-align: left;
+		max-width: none;
+		grid-template-columns: calc(50% - 16px) 25% calc(25% + 16px);
+		grid-template-areas: 'title menu links';
+	}
+	.frame__navMenu {
+		margin: 0;
+		grid-area: menu;
+	}
+}
+
+.nav-toggle {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.nav-toggle:focus {
+	outline: 2px solid #fff;
+}
+
+#main-nav-toggle {
+	position: fixed;
+	left: -999em;
+}
+
+#main-nav-toggle:checked~nav.main-nav {
+	display: flex;
+	opacity: 1;
+	pointer-events: all;
+	z-index: 9999;
+}
+
+.main-nav__canvas {
+	display: none;
+}
+
+nav.main-nav {
+	transition: 0.3s opacity;
+	align-items: center;
+	background: #151515;
+	font-family: tenez, serif;
+	justify-content: center;
+	display: flex;
+	height: 100%;
+	left: 0px;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+}
+
+ul.main-nav__fallback {
+	position: fixed;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+ul.main-nav__fallback a {
+	font-size: 5vw;
+	color: #525252;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 40.063em) {
+	.main-nav__canvas {
+		display: block;
+		height: 100%;
+		left: 0px;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		z-index: 100;
+	}
+}
+
+.main-nav__close {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 2rem;
+	z-index: 101;
+	cursor: pointer;
+	fill: #4b4b4b;
+}
