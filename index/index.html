@@ -35,7 +35,7 @@
         content="Luxam est la première entreprise mondiale spécialiste de l'éclairage de vitrine de musée">
 
     <!-- Links -->
-   
+    <base href="https://luxam.fr/">
     <link rel="canonical" href="https://luxam.fr/portfolio" />
     <link rel="alternate" hreflang="fr" href="https://luxam.fr/portfolio" />
     <link rel="alternate" hreflang="en" href="https://luxam.fr/en/portfolio" />
@@ -334,6 +334,7 @@
         integrity="sha256-Ma7RFL/ajnMYYVm0iyAqCA2j+jWid5Xr2DQr+kYG1XA=" crossorigin="anonymous" defer></script>
     <script src="https://luxam.fr/assets/js/app.5fbe0ce95e75ea944a3a.js" defer></script>
     <script>
+        console.log(window.location.href);
         const clickHandler = (location) => {
             setTimeout(() => {
                 window.location.assign(`/${location}`)
